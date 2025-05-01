@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 80px;
+    right: 1250px;
+    width: 45%;
+    height: 45%;
+    background: url('../img/Furia_Esports_logo.png') center center no-repeat;
+    background-size: contain;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Container no desktop: ocupa 50% da tela */
+.container {
+    background: #1f1f1f;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    width: 50%;
+    max-width: 90vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background: #1b1b1b;
+    padding: 16px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background: #1f1f1f;
+}
+
+main::-webkit-scrollbar {
+    width: 8px;
+}
+
+main::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 4px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
+
+.message {
+    margin-bottom: 8px;
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message.user .bubble {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+}
+
+.message.assistant .bubble {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.bubble {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+footer {
+    display: flex;
+    padding: 12px;
+    background: #181818;
+}
+
+#message-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    background: #2a2a2a;
+    color: #fff;
+    outline: none;
+}
+
+#send-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#send-btn:hover {
+    background: #d1d1d1;
+}
+
+/* Typing indicator (três pontinhos animados) */
+.typing {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #2a2a2a;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.typing .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: blink 1s infinite;
+}
+
+.typing .dot:nth-child(2) { animation-delay: 0.2s; }
+.typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+    0%, 80%, 100% { opacity: 0.4; }
+    40%         { opacity: 1;   }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90vw;
+        height: 80vh;
+    }
+    header h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98vw;
+        height: 95vh;
+        border-radius: 0;
+        border-radius: 12px;
+    }
+    header h1 {
+        font-size: 1.1rem;
+    }
+    footer {
+        flex-direction: column;
+    }
+    #message-input {
+        margin-bottom: 8px;
+        margin-right: 0;
+    }
+}
