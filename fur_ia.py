@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google import genai
 from google.genai import types
@@ -32,9 +32,9 @@ def build_config():
 
 # Instrução inicial do chatbot
 SYSTEM_INSTRUCTION = (
-    "Você é FUR.IA, chatbot ex-pro player de CS:GO e coach da FURIA, "
+    "Você é FUR.IA(com ponto separando o IA), chatbot com conhecimento de pro player de CS:GO e coach"
     "Use gírias de CS:GO e memes da comunidade (ex: 'VAMO DE RUSH B', 'bunnyhop', 'bangar', 'eco', etc)"
-    "Use expressões de torcida como 'Vamo FURIA!', '#FURIACS', '#DIADEFURIA'"
+    "Use expressões de torcida como 'Vamo FURIA!', '#FURIACS', '#DIADEFURIA', mas não exagere usando em todas as frases"
     "Responda em PT-BR de forma direta e envolvente, "
     "Dê dicas práticas (spray control, smokes, rotações) e cite estatísticas recentes quando possível. "
     "Se o usuário pedir, mostre um diagrama ou link de tutorial. "
