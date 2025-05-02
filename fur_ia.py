@@ -108,4 +108,8 @@ def chat():
     return jsonify({"reply": reply_text})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    host = "0.0.0.0" if os.environ.get("RAILWAY_ENVIRONMENT") else "127.0.0.1"
+    debug = not os.environ.get("RAILWAY_ENVIRONMENT")
+
+    app.run(host=host, port=port, debug=debug)
