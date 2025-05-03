@@ -5,7 +5,9 @@ O FUR.IA chatbot é um projeto de fã para a organização FURIA e‑sports. Des
 
 <div align="center">
     <img src="https://github.com/arthurantonello/chatbot-furia/blob/87b2c96226c435c0b88f22e65dcd6f71bb7988e5/static/img/tela_chatbot.png" alt="Tela do formulário pronto" width="900" height="430"/><br>
-    <a href="https://www.youtube.com/watch?v=7eBeU9yoLA4&ab_channel=Arthur" target="_blank">🎥 Vídeo demonstração do Chatbot em funcionamento e estruturação</a>
+    <a href="https://chatbot-furia.up.railway.app/" target="_blank">Link para o projeto hospedado</a><br>
+    <a href="https://www.youtube.com/watch?v=7eBeU9yoLA4&ab_channel=Arthur" target="_blank">Vídeo demonstração do Chatbot em funcionamento e estruturação</a>
+    
 </div>
 
 
