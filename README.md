@@ -1,5 +1,4 @@
 # FUR.IA Chatbot
-> Ao avaliador: Está commitado o `.env` com a minha API KEY para fins de testes, favor desconsiderar os passos de criar conta e inserir api key, após o período de avaliação o arquivo será removido do repositório.
 
 O FUR.IA chatbot é um projeto de fã para a organização FURIA e‑sports. Desenvolvido em Python e JavaScript, ele conversa em português com fãs de CS:GO, usando a API de IA Gemini, modelo da Google, para gerar respostas descontraídas e condizentes, e serve tudo por meio de um servidor Flask.
 
